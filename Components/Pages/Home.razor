@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<PageTitle>Happy Birthday</PageTitle>
+
+<link href="css/style.css" rel="stylesheet" />
+
+<div class="container">
+
+    <h1>Nhập mật khẩu ikkk 🎁</h1>
+
+    <div class="content">
+
+        <img src="images/avatar.jpg" class="avatar" />
+
+        <div class="password-section">
+
+            <input type="password"
+                   id="password"
+                   readonly />
+
+            <div class="keypad">
+
+                <button onclick="addNumber('1')">1</button>
+                <button onclick="addNumber('2')">2</button>
+                <button onclick="addNumber('3')">3</button>
+
+                <button onclick="addNumber('4')">4</button>
+                <button onclick="addNumber('5')">5</button>
+                <button onclick="addNumber('6')">6</button>
+
+                <button onclick="addNumber('7')">7</button>
+                <button onclick="addNumber('8')">8</button>
+                <button onclick="addNumber('9')">9</button>
+
+                <button class="clear"
+                        onclick="clearPassword()">
+                    X
+                </button>
+
+                <button class="zero"
+                        onclick="addNumber('0')">
+                    0
+                </button>
+
+                <button class="submit"
+                        onclick="checkPassword()">
+                    ❤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>

@@ -1,0 +1,45 @@
+﻿@page "/sinhnhat"
+@inject IJSRuntime JS
+
+<PageTitle>Happy Birthday</PageTitle>
+
+<link href="css/sn.css" rel="stylesheet" />
+
+<div class="hearts" id="hearts"></div>
+
+<div class="envelope closed" id="envelope">
+
+    <div class="envelope-flap"></div>
+
+    <div class="letter">
+
+        <h1>Happy Birthday 🎂</h1>
+
+        <p>
+            Chúc Trà Cua sinh nhật zui zẻ và hạnh phúc
+        </p>
+
+        <p>
+            Tuổi mới rực cháy và đạt nhiều thành công
+        </p>
+
+        <p class="signature" id="signature">
+            From VPT.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/sn.js"></script>
+
+@code{
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initializeBirthday");
+        }
+    }
+}
